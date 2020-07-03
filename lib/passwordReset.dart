@@ -46,14 +46,22 @@ class _PasswordScreenState extends State<PasswordScreen> {
                             return Row(
                               children: <Widget>[
                                 RaisedButton(
+                                  color: Colors.red,
                                   padding: const EdgeInsets.all(5.0),
                                   onPressed: onStepCancel,
-                                  child: Text('Zurück',
-                                      style: TextStyle(color: Colors.black)),
+                                  child: Text(
+                                    'Zurück',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
                                 SizedBox(width: 20),
                                 RaisedButton(
-                                  color: Theme.of(context).accentColor,
+                                  color: Color(0xFF3ADE00),
+                                  // color: Theme.of(context).accentColor,
                                   onPressed: onStepContinue,
                                   child: Text('Weiter',
                                       style: TextStyle(color: Colors.white)),
@@ -154,11 +162,35 @@ class _PasswordScreenState extends State<PasswordScreen> {
                               title: Text('Benutzer / Email-Adresse'),
                               content: Column(children: <Widget>[
                                 SizedBox(height: 20),
+                                // TextField(
+                                //   // controller: _emailFilter,
+                                //   decoration: InputDecoration(
+                                //       border: OutlineInputBorder(),
+                                //       labelText: 'Email Adresse'),
+                                // ),
                                 TextField(
-                                  // controller: _emailFilter,
+                                  onChanged: (value) {
+                                    //on change work goes here
+                                  },
+                                  // controller: _controllerEmail,
+                                  style: TextStyle(color: Colors.white),
+
                                   decoration: InputDecoration(
+                                      // errorText: userLogin.getBlankEmailMessage(),
+                                      enabledBorder: const OutlineInputBorder(
+                                        borderSide: const BorderSide(
+                                            color: Colors.white, width: 2.0),
+                                      ),
                                       border: OutlineInputBorder(),
-                                      labelText: 'Email Adresse'),
+                                      labelText: 'Enter Email',
+                                      labelStyle: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.green)),
+                                      hintStyle: TextStyle(color: Colors.white),
+                                      fillColor: Colors.white),
                                 ),
                                 SizedBox(height: 20),
                               ]),
@@ -167,11 +199,36 @@ class _PasswordScreenState extends State<PasswordScreen> {
                               title: Text('Verifizieren'),
                               content: Column(children: <Widget>[
                                 SizedBox(height: 20),
+                                // TextField(
+                                //   // controller: _tokenFilter,
+                                //   decoration: InputDecoration(
+                                //       border: OutlineInputBorder(),
+                                //       labelText: 'Validierungscode'),
+                                // ),
                                 TextField(
-                                  // controller: _tokenFilter,
+                                  onChanged: (value) {
+                                    //on change work goes here
+                                  },
+                                  // controller: _controllerEmail,
+                                  style: TextStyle(color: Colors.white),
+
                                   decoration: InputDecoration(
+                                      // errorText: userLogin.getBlankEmailMessage(),
+                                      enabledBorder: const OutlineInputBorder(
+                                        borderSide: const BorderSide(
+                                            color: Colors.white, width: 2.0),
+                                      ),
                                       border: OutlineInputBorder(),
-                                      labelText: 'Validierungscode'),
+                                      labelText: 'Enter Code',
+                                      labelStyle: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.green)),
+                                      hintStyle: TextStyle(color: Colors.white),
+                                      fillColor: Colors.white),
+                                  obscureText: true,
                                 ),
                                 SizedBox(height: 20),
                               ]),
@@ -181,17 +238,61 @@ class _PasswordScreenState extends State<PasswordScreen> {
                               content: Column(children: <Widget>[
                                 SizedBox(height: 20),
                                 TextField(
-                                  // controller: _passwordFilter,
+                                  onChanged: (value) {
+                                    //on change work goes here
+                                  },
+                                  // controller: _controllerEmail,
+                                  style: TextStyle(color: Colors.white),
+
                                   decoration: InputDecoration(
+                                      // errorText: userLogin.getBlankEmailMessage(),
+                                      enabledBorder: const OutlineInputBorder(
+                                        borderSide: const BorderSide(
+                                            color: Colors.white, width: 2.0),
+                                      ),
                                       border: OutlineInputBorder(),
-                                      labelText: 'Neues Passwort'),
+                                      labelText: 'Enter Password',
+                                      labelStyle: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.green)),
+                                      hintStyle: TextStyle(color: Colors.white),
+                                      fillColor: Colors.white),
+                                  obscureText: true,
                                 ),
                                 SizedBox(height: 10),
+                                // TextField(
+                                //   // controller: _passwordFilter,
+                                //   decoration: InputDecoration(
+                                //       border: OutlineInputBorder(),
+                                //       labelText: 'Passwort bestätigen'),
+                                // ),
                                 TextField(
-                                  // controller: _passwordFilter,
+                                  onChanged: (value) {
+                                    //on change work goes here
+                                  },
+                                  // controller: _controllerEmail,
+                                  style: TextStyle(color: Colors.white),
+
                                   decoration: InputDecoration(
+                                      // errorText: userLogin.getBlankEmailMessage(),
+                                      enabledBorder: const OutlineInputBorder(
+                                        borderSide: const BorderSide(
+                                            color: Colors.white, width: 2.0),
+                                      ),
                                       border: OutlineInputBorder(),
-                                      labelText: 'Passwort bestätigen'),
+                                      labelText: 'Confirm Password',
+                                      labelStyle: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.green)),
+                                      hintStyle: TextStyle(color: Colors.white),
+                                      fillColor: Colors.white),
+                                  obscureText: true,
                                 ),
                                 SizedBox(height: 20),
                               ]),
