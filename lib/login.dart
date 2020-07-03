@@ -26,6 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Colors.white,
               ),
               child: SingleChildScrollView(
+                //padding goes here
                 child: Container(
                   margin:
                       const EdgeInsets.only(left: 15.0, right: 15.0, top: 30),
