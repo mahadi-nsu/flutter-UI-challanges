@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:notification_practise/passwordReset.dart';
+import 'package:notification_practise/update.dart';
 
 import 'login.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PasswordScreen(),
+      home: Update(),
     );
   }
 }

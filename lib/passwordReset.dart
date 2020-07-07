@@ -159,7 +159,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                           },
                           steps: <Step>[
                             new Step(
-                              title: Text('Benutzer / Email-Adresse'),
+                              title: Text('Benutzer / Email-Adresse',
+                                  style: TextStyle(color: Colors.white)),
                               content: Column(children: <Widget>[
                                 SizedBox(height: 20),
                                 // TextField(
@@ -196,7 +197,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                               ]),
                             ),
                             new Step(
-                              title: Text('Verifizieren'),
+                              title: Text('Verifizieren',
+                                  style: TextStyle(color: Colors.white)),
                               content: Column(children: <Widget>[
                                 SizedBox(height: 20),
                                 // TextField(
@@ -234,7 +236,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                               ]),
                             ),
                             new Step(
-                              title: Text('Passwort ändern'),
+                              title: Text('Passwort ändern',
+                                  style: TextStyle(color: Colors.white)),
                               content: Column(children: <Widget>[
                                 SizedBox(height: 20),
                                 TextField(
